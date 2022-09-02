@@ -43,9 +43,9 @@ p{
     height: 46vh;
 }
 
-.startRating{
+#startRating{
     /* display: none; */
-    display: flex;
+    /* display: flex; */
     height: 100%;
     flex-direction: column; 
     justify-content:space-between;
@@ -109,23 +109,21 @@ button:hover{
 
 }
 
-.endRating{
-    /* display: flex; */
-    display: none;
+#endRating{
     flex-direction: column;
     height:100%;
     justify-content: space-around;
     align-items: center;
 
 }
-.endRating>img{
+#endRating>img{
     height: 15vh;
 }
-.endRating>p{
+#endRating>p{
     text-align: center;
     line-height: 20px;
 }
-#score{
+.result{
     color: hsl(25, 97%, 53%);
     background-color: hsl(206, 17%, 18%);
     padding: 1.5vh 3vw 1vh 3vw;
@@ -139,6 +137,14 @@ button:hover{
 .selected{
     background-color: hsl(217, 12%, 63%);
     color:white;
+}
+
+.hidden{
+    display: none;
+}
+.shown{
+    
+    display: flex;
 }
 
 @media screen and (max-width: 376px){

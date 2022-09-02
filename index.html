@@ -36,7 +36,7 @@
     <div id="card">
       <!-- Rating state start -->
       <div id="cardContent">
-        <div class="startRating">
+        <div id="startRating" class="shown">
           <div>
             <img src="./images/icon-star.svg" alt="star_icon" id="starIcon" />
           </div>
@@ -60,13 +60,9 @@
           <!-- Rating state end -->
           <!-- Thank you state start -->
         </div>
-        <div class="endRating">
+        <div id="endRating" class="hidden">
           <img src="./images/illustration-thank-you.svg" alt="thankyou_icon" />
-          <div id="score">
-            You selected XX
-            <!-- Add rating here -->
-            out of 5
-          </div>
+          <div id="resultWindow"></div>
 
           <h2>Thank you!</h2>
           <p>
