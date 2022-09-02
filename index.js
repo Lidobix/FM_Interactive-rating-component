@@ -1,11 +1,14 @@
 window.addEventListener('DOMContentLoaded', function () {
-  const ratingButtons = this.document.getElementsByClassName('selectRate');
-  const submitButton = this.document.getElementById('submit');
+  const cardContent = this.document.getElementById('cardContent');
   const startWindow = this.document.getElementById('startRating');
   const endWindow = this.document.getElementById('endRating');
+  const ratingButtons = this.document.getElementsByClassName('selectRate');
+  const submitButton = this.document.getElementById('submit');
   const resultWindow = this.document.getElementById('resultWindow');
 
   let score = 0;
+
+  cardContent.removeChild(endWindow);
 
   for (let button of ratingButtons) {
     button.addEventListener('click', function () {
@@ -21,12 +24,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
   submitButton.addEventListener('click', function () {
     if (score != 0) {
-      startWindow.classList.remove('shown');
-      startWindow.classList.add('hidden');
-
-      endWindow.classList.remove('hidden');
-      endWindow.classList.add('shown');
-
+      cardContent.removeChild(startWindow);
+      cardContent.appendChild(endWindow);
       resultWindow.innerHTML = `You selected ${score} out of 5`;
       resultWindow.classList.add('result');
     }
