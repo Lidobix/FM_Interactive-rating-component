@@ -10,7 +10,7 @@
 }
 
 .attribution a {
-color: hsl(228, 45%, 44%);
+    color: hsl(228, 45%, 44%);
 }
 
 body{
@@ -44,8 +44,8 @@ p{
 }
 
 .startRating{
-    display: none;
-    /* display: flex; */
+    /* display: none; */
+    display: flex;
     height: 100%;
     flex-direction: column; 
     justify-content:space-between;
@@ -85,7 +85,6 @@ p{
 }
 
 #submit:hover{
-    border: 1px solid white;
     text-align: center;
     background-color: hsl(0, 0%, 100%) ;
     color:hsl(25, 97%, 53%);
@@ -100,7 +99,6 @@ button{
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border: transparent;
-    /* background-color: hsl(0, 0%, 100%) ; */
     color:hsl(217, 12%, 63%);
     background-color: hsl(206, 17%, 18%);
 }
@@ -112,7 +110,8 @@ button:hover{
 }
 
 .endRating{
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     height:100%;
     justify-content: space-around;
@@ -137,16 +136,20 @@ button:hover{
     -o-border-radius: 3vh;
 }
 
+.selected{
+    background-color: hsl(217, 12%, 63%);
+    color:white;
+}
 
 @media screen and (max-width: 376px){
  
     
-    }
-    @media screen and (min-width: 1440px){
-        #card{
-           
-            width:28vw;
-            height: 51vh;
-            
-        }
-    }
+}
+@media screen and (min-width: 1440px){
+    /* #card{
+        
+    width:28vw;
+    height: 51vh;
+    
+    } */
+}
